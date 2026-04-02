@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adivina el Número - Code 101</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button id="btnTema" class="theme-toggle">🌙</button>
+    <main id="game-container">
+      <h1>🔢🎯 Adivina el Número</h1>
+      <p>He pensado un número entre 1 y 100. ¿Puedes adivinarlo?</p>
+
+      <section class="input-area">
+        <input
+          type="number"
+          id="inputNumero"
+          placeholder="Escribe un número..."
+          min="1"
+          max="100"
+        />
+        <button id="btnAdivinar">Adivinar!</button>
+      </section>
+
+      <section class="feedback-area">
+        <p id="mensaje">¡Suerte, <span id="nombre-jugador">Yael</span>!</p>
+        <p>Intentos: <span id="contador">0</span></p>
+      </section>
+
+      <section class="history-area">
+        <h3>Historial de números:</h3>
+        <ul id="listaIntentos"></ul>
+      </section>
+
+      <button id="btnReiniciar" style="display: none">Jugar de nuevo</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
