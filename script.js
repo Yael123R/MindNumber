@@ -71,9 +71,9 @@ function verificarIntento()  {
 
     if (suposicion === numeroSecreto) {
         mensaje.textContent = `🎉 ¡Felicidades ${nombreUsuario}! El número era ${numeroSecreto}.`;
-        mensaje.style.color = "#2ecc71"; // Un toque de verde para la victoria
-        btnReiniciar.style.display = "block"; // Mostramos el botón de reiniciar
-        input.disabled = true; // Bloqueamos el input para que no siga escribiendo
+        mensaje.style.color = "#2ecc71";
+        btnReiniciar.style.display = "block";
+        input.disabled = true;
     } else {
         const nuevoLi = document.createElement("li");
         
