@@ -1,54 +1,35 @@
-🎯 Juego de Adivinanza: "Adivina el Número"
+# 🔢🎯 MindNumber
 
-Un juego interactivo de lógica y adivinanza desarrollado como parte del aprendizaje en Code 101. El proyecto destaca por su interfaz limpia, sistema de retroalimentación inteligente y una funcionalidad avanzada de Modo Oscuro/Claro.
+A number guessing game built with vanilla JavaScript — test your intuition and find the secret number!
 
-🚀 Características principales
+## 🌐 Live Demo
+👉 [Play MindNumber](https://yael123r.github.io/MindNumber/)
 
-Lógica de "Intuición": El juego no solo te dice si el número es alto o bajo, sino que utiliza un sistema de mensajes dinámicos para guiar al jugador.
+## 📸 Preview
+![MindNumber Preview](preview.png)
 
-Tema Dual (Dark/Light Mode): Incluye un interruptor (toggle) en la esquina superior que permite cambiar la estética del juego en tiempo real utilizando variables de CSS y manipulación del DOM.
+## 🎮 How to Play
+1. Enter your name to start
+2. Guess a number between 1 and 100
+3. The game tells you if the secret number is higher or lower
+4. Keep guessing until you find it!
 
-Historial de Intentos: Registro detallado de cada jugada para que el usuario pueda analizar sus decisiones previas.
+## ✨ Features
+- 🧠 Random number generation
+- 📊 Attempt history tracking
+- 🌙 Dark / Light mode toggle
+- 👤 Personalized experience with player name
+- ⌨️ Keyboard support (Enter key)
 
-Diseño Responsivo: Interfaz adaptada para diferentes tamaños de pantalla con un estilo moderno y minimalista.
+## 🛠️ Built With
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
-📂 Estructura del Proyecto
+## 📁 Project Structure
+- `index.html`
+- `style.css`
+- `script.js`
 
-El proyecto se compone de tres archivos fundamentales:
-
-1. index.html (Estructura)
-Define el "esqueleto" semántico de la aplicación.
-
-Usa etiquetas como <main> para el contenedor principal y <section> para organizar las áreas de entrada y resultados.
-
-Contiene el botón interactivo para el cambio de tema (#btnTema) y los campos necesarios para la jugada (#inputNumero, #btnAdivinar).
-
-2. style.css (Diseño y Temas)
-Gestiona la apariencia visual mediante el uso de Variables CSS (Custom Properties).
-
-Modo Claro: Basado en gradientes suaves y fondos blancos limpios.
-
-Modo Oscuro: Activado mediante la clase .dark-mode, cambia automáticamente la paleta de colores a tonos azulados profundos y textos claros.
-
-Transiciones: Implementa transition: 0.4s para asegurar que el cambio entre temas sea fluido y agradable a la vista.
-
-3. script.js (Lógica y Dinamismo)
-
-El "cerebro" del juego escrito en JavaScript.
-
-Control del Juego: Genera el número secreto, valida la entrada del usuario y actualiza el contador de intentos.
-
-Gestión del DOM: Cambia dinámicamente los mensajes de feedback y el contenido del historial.
-
-Lógica del Switcher: Escucha el evento onclick del botón de tema para alternar la clase en el body y actualizar el emoji (☀️/🌙).
-
-🛠️ Cómo ejecutarlo
-
-Descarga los tres archivos en una misma carpeta.
-
-Abre el archivo index.html en cualquier navegador web moderno.
-
-¡Disfruta adivinando y probando el Modo Oscuro!
-
-Desarrollado por: Yael Yusef Huamani Mucha 👨‍💻
-Curso: Code 101 - Enter Tech School
+## 👨‍💻 Author
+**Yael** — [GitHub](https://github.com/Yael123R)
