@@ -2,7 +2,7 @@
 
 Un juego de adivinanza de números hecho con JavaScript puro — ¡pon a prueba tu intuición y encuentra el número secreto!
 
-> 🌐 [English Version](README.md)
+> 🌐 [Versión en Inglés](README.md)
 
 ## 🌐 Demo en Vivo
 👉 [Jugar MindNumber](https://yael123r.github.io/MindNumber/)
