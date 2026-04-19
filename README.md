@@ -27,12 +27,9 @@ A number guessing game built with vanilla JavaScript — test your intuition and
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
 ## 📁 Project Structure
-```
-MindNumber/
-├── index.html
-├── style.css
-└── script.js
-```
+- `index.html` — estructura del juego
+- `style.css` — estilos y modo oscuro
+- `script.js` — lógica del juego
 
 ## 👨‍💻 Author
 **Yael** — [GitHub](https://github.com/Yael123R)
