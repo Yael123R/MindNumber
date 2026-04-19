@@ -32,8 +32,4 @@ A number guessing game built with vanilla JavaScript — test your intuition and
 - `script.js`
 
 ## 👨‍💻 Author
-<<<<<<< HEAD
 **Yael** — [GitHub](https://github.com/Yael123R)
-=======
-**Yael** — [GitHub](https://github.com/Yael123R)
->>>>>>> addbf7b661136051e9ea7a63721f745ef6277d67
