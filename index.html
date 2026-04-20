@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adivina el Número - Code 101</title>
+    <title>MindNumber</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,8 +13,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="pantalla-inicio">
+      <h1>🔢🎯 MindNumber</h1>
+      <p>¿Estás listo para adivinar el número secreto?</p>
+
+      <input type="text" id="inputNombre" placeholder="Tu nombre (opcional)" />
+      <input
+        type="number"
+        id="inputEdad"
+        placeholder="Tu edad (obligatorio)"
+        min="1"
+      />
+
+      <p id="error-registro" class="hidden"></p>
+
+      <button id="btnJugar">¡Jugar!</button>
+    </div>
     <button id="btnTema" class="theme-toggle">🌙</button>
-    <main id="game-container">
+    <main id="game-container" class="hidden">
       <h1>🔢🎯 Adivina el Número</h1>
       <p>He pensado un número entre 1 y 100. ¿Puedes adivinarlo?</p>
 
@@ -30,7 +46,7 @@
       </section>
 
       <section class="feedback-area">
-        <p id="mensaje">¡Suerte, <span id="nombre-jugador">Yael</span>!</p>
+        <p id="mensaje">¡Suerte, <span id="nombre-jugador"></span>!</p>
         <p>Intentos: <span id="contador">0</span></p>
       </section>
 
