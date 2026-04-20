@@ -2,6 +2,8 @@
 
 A number guessing game built with vanilla JavaScript — test your intuition and find the secret number!
 
+> 🌐 [Spanish Version](README.es.md)
+
 ## 🌐 Live Demo
 👉 [Play MindNumber](https://yael123r.github.io/MindNumber/)
 
@@ -27,9 +29,9 @@ A number guessing game built with vanilla JavaScript — test your intuition and
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
 
 ## 📁 Project Structure
-- `index.html`
-- `style.css`
-- `script.js`
+- `index.html` — game structure
+- `style.css` — styles and dark mode
+- `script.js` — game logic
 
 ## 👨‍💻 Author
 **Yael** — [GitHub](https://github.com/Yael123R)
