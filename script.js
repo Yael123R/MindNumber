@@ -1,43 +1,37 @@
 // --- Datos del Usuario ---
+let nombreUsuario = "";
 
-let nombreUsuario = prompt("¿Cual es tu nombre?");
+// --- Pantalla de Inicio ---
+document.getElementById("btnJugar").onclick = function() {
+    const inputNombre = document.getElementById("inputNombre").value.trim();
+    const inputEdad = document.getElementById("inputEdad").value.trim();
+    const errorRegistro = document.getElementById("error-registro");
 
-// --- Si el usuario no decide compartir su nombre ---
-
-if (!nombreUsuario) {
-    nombreUsuario = "Jugador";
-}
-
-let entradaEdad = prompt("¿Cuantos años tienes?");
-
-// --- Si el usuario no decidio compartir su edad ---
-
-while (entradaEdad === null || entradaEdad === "") {
-    alert(`Por favor ${nombreUsuario}, introduzca una edad para continuar.`);
-    entradaEdad = prompt("Cuantos años tiene? (Es obligatorio)");
-
-    if (entradaEdad === null || entradaEdad === "") {
-        alert("❌ Acceso Denegado. Es imposible continuar sin registrar su edad.");
-        location.reload();
-        throw "Deteniendo ejecución";
+    // --- Validacion de edad ---
+    if (!inputEdad) {
+        errorRegistro.textContent = "⚠️ Por favor, ingresa tu edad para continuar.";
+        errorRegistro.classList.remove("hidden");
+        return;
     }
-}
 
-let edadUsuario = Number(entradaEdad);
+    const edadUsuario = Number(inputEdad);
 
-// --- Verificacion de edad ---
+    if (edadUsuario < 5) {
+        errorRegistro.textContent = "❌ Lo sentimos, debes tener al menos 5 años para jugar.";
+        errorRegistro.classList.remove("hidden");
+        return;
+    }
 
-if (edadUsuario >= 18) {
-    alert(`¡Bienvenido ${nombreUsuario}! Puedes adivinar 🧠.`);
-} else {
-    alert(`Hola ${nombreUsuario}. Eres menor y todavia no puedes adivinar 👺.`);
-    location.reload();
-    throw "Menor de edad";
-}
+    // --- Nombre opcional ---
+    nombreUsuario = inputNombre || "Jugador";
 
-// --- Actualización de la Interfaz ---
+    // --- Actualizar interfaz ---
+    document.getElementById("nombre-jugador").textContent = nombreUsuario;
 
-document.getElementById('nombre-jugador').textContent = nombreUsuario;
+    // --- Cambiar de vista ---
+    document.getElementById("pantalla-inicio").classList.add("hidden");
+    document.getElementById("game-container").classList.remove("hidden");
+};
 
 // --- Cerebro del Programa ---
 
