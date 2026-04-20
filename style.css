@@ -212,7 +212,7 @@ button {
 
 /* --- Clase para ocultar elementos --- */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* --- Pantalla de Inicio --- */
