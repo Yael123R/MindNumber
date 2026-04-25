@@ -80,6 +80,13 @@ h1 {
   transition:
     border-color 0.3s,
     background-color 0.3s;
+  appearance: textfield;
+}
+
+#inputNumero::-webkit-inner-spin-button,
+#inputNumero::-webkit-outer-spin-button {
+  -webkit-appearance: none; /* 👈 Chrome, Edge, Safari */
+  margin: 0;
 }
 
 #inputNumero:focus {

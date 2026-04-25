@@ -40,6 +40,7 @@ document.getElementById("btnJugar").onclick = function () {
 
 let numeroSecreto = Math.floor(Math.random() * 100) + 1;
 let intentos = 0;
+let vidas = 10; // 👈 vidas
 
 // --- Procesador de Intentos ---
 
@@ -70,6 +71,9 @@ function verificarIntento() {
     btnReiniciar.style.display = "block";
     input.disabled = true;
   } else {
+    vidas--;
+    document.getElementById("vidas").textContent = "❤️".repeat(vidas);
+
     const nuevoLi = document.createElement("li");
 
     if (suposicion < numeroSecreto) {
@@ -82,7 +86,15 @@ function verificarIntento() {
       nuevoLi.textContent = `Intento ${intentos}: ${suposicion} (El número es menor 🎯)`;
     }
 
-    listaHistorica.appendChild(nuevoLi);
+    listaHistorica.insertBefore(nuevoLi, listaHistorica.firstChild);
+
+    // Si acabas tus 10 vidas
+    if (vidas === 0) {
+      mensaje.textContent = `💀 ¡Game Over, ${nombreUsuario}! El número era ${numeroSecreto}.`;
+      mensaje.style.color = "#e74c3c";
+      btnReiniciar.style.display = "block";
+      input.disabled = true;
+    }
   }
 
   input.value = "";
@@ -95,16 +107,28 @@ document.getElementById("btnAdivinar").onclick = verificarIntento;
 
 // --- Al hacer click al boton "Jugar de Nuevo" ---
 
-document.getElementById("btnReiniciar").onclick = function () {
-  location.reload();
-};
+function reiniciarJuego() {
+  numeroSecreto = Math.floor(Math.random() * 100) + 1;
+  intentos = 0;
+  vidas = 10;
+
+  document.getElementById("contador").textContent = 0;
+  document.getElementById("vidas").textContent = "❤️".repeat(10);
+  document.getElementById("mensaje").textContent = `¡Suerte, ${nombreUsuario}!`;
+  document.getElementById("mensaje").style.color= "";
+  document.getElementById("listaIntentos").innerHTML = "";
+  document.getElementById("inputNumero").disabled = false;
+  document.getElementById("btnReiniciar").style.display = "none";
+  document.getElementById("inputNumero").focus();
+}
+
+document.getElementById("btnReiniciar").onclick = reiniciarJuego;
 
 // --- Funcion de la tecla "Enter" ---
 
-document
-  .getElementById("inputNumero")
-  .addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
+document.getElementById("inputNumero").addEventListener("keydown", function (e) {
+    if (e.key === " " || e.code === "Space") {
+      e.preventDefault();
       verificarIntento();
     }
   });
